@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripts et Hacks de Jeux Gratuits</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2d2d2d;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 50px;
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .link-card {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .link-card:hover {
+            transform: scale(1.1);
+            background-color: #444;
+        }
+
+        .link-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Alerte Windows */
+        .alert {
+            display: none;
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border: 2px solid #0078D4;
+            font-size: 1.2em;
+            width: 450px;
+            height: auto;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            animation: pop-up 0.5s ease-out;
+        }
+
+        @keyframes pop-up {
+            0% {
+                transform: translateX(-50%) scale(0.9);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(-50%) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .alert-header {
+            background-color: #0078D4;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .alert-message {
+            margin: 20px 0;
+        }
+
+        .alert button {
+            width: 100%;
+            padding: 15px;
+            background-color: #ff5555;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .alert button:hover {
+            background-color: #ff3333;
+        }
+
+        .alert .countdown {
+            font-size: 1.5em;
+            color: black;
+            margin-top: 10px;
+        }
+
+        .alert-footer {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        .windows-btn {
+            padding: 10px 20px;
+            background-color: #0078D4;
+            color: white;
+            border: 1px solid #0078D4;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .windows-btn:hover {
+            background-color: #005a9e;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SCRIPTS ET HACKS DE JEUX GRATUITS</h1>
+    <p>Téléchargez des scripts pour Fortnite, Roblox, GTA, Minecraft, Among Us, et plus encore !</p>
+
+    <div class="container">
+        <!-- Liens de téléchargement -->
+        <div class="link-card" onclick="triggerAlert('Roblox Script')">
+            <img src="https://via.placeholder.com/300x200.png?text=Roblox+Script" alt="Roblox Script">
+            <p>Roblox - Script de Triche</p>
+        </div>
+        <div class="link-card" onclick="triggerAlert('Fortnite Script')">
+            <img src="https://via.placeholder.com/300x200.png?text=Fortnite+Script" alt="Fortnite Script">
+            <p>Fortnite - Script de Triche</p>
+        </div>
+        <div class="link-card" onclick="triggerAlert('GTA V Script')">
+            <img src="https://via.placeholder.com/300x200.png?text=GTA+V+Script" alt="GTA V Script">
+            <p>GTA V - Script de Triche</p>
+        </div>
+        <div class="link-card" onclick="triggerAlert('Brawl Stars Script')">
+            <img src="https://via.placeholder.com/300x200.png?text=Brawl+Stars+Script" alt="Brawl Stars Script">
+            <p>Brawl Stars - Script de Triche</p>
+        </div>
+        <div class="link-card" onclick="triggerAlert('Valorant Script')">
+            <img src="https://via.placeholder.com/300x200.png?text=Valorant+Script" alt="Valorant Script">
+            <p>Valorant - Script de Triche</p>
+        </div>
+        <div class="link-card" onclick="triggerAlert('Minecraft Script')">
+            <img src="https://via.placeholder.com/300x200.png?text=Minecraft+Script" alt="Minecraft Script">
+            <p>Minecraft - Script de Triche</p>
+        </div>
+        <div class="link-card" onclick="triggerAlert('Among Us Script')">
+            <img src="https://via.placeholder.com/300x200.png?text=Among+Us+Script" alt="Among Us Script">
+            <p>Among Us - Script de Triche</p>
+        </div>
+    </div>
+
+    <!-- Alerte Windows -->
+    <div class="alert" id="alertBox">
+        <div class="alert-header">
+            <p><strong>ALERTE SYSTÈME</strong></p>
+        </div>
+        <div class="alert-message">
+            <p><strong>Votre ordinateur a été infecté par le virus <span style="color: red;">delta.exe</span> !</strong></p>
+            <p>Si vous ne payez <span id="price">550€</span>, vos informations personnelles seront partagées au public !</p>
+            <p><strong>Appelez immédiatement le support technique :</strong></p>
+            <p><strong>+33 1 70 18 48 80</strong></p>
+        </div>
+        <div class="countdown" id="countdown">00:05:00</div>
+        <div class="alert-footer">
+            <button id="closeButton" disabled>Fermer l'alerte</button>
+        </div>
+    </div>
+
+    <audio id="alertSound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+
+    <script>
+        let countdownTime = 300; // 5 minutes en secondes
+        let countdownInterval;
+        let price = 550; // Prix de départ
+        let priceIncreaseInterval;
+
+        function triggerAlert(game) {
+            // Jouer le son d'alerte
+            document.getElementById('alertSound').play();
+
+            // Afficher l'alerte de style Windows
+            document.getElementById('alertBox').style.display = 'block';
+
+            // Démarrer le compte à rebours
+            countdownInterval = setInterval(updateCountdown, 1000);
+
+            // Démarrer l'augmentation du prix
+            priceIncreaseInterval = setInterval(increasePrice, 5000); // Augmenter le prix toutes les 5 secondes
+
+            // Afficher le nom du jeu dans l'alerte
+            document.querySelector('.alert-message p').innerHTML = `<strong>Votre ordinateur a été infecté par le virus delta.exe après avoir téléchargé un script pour ${game}.</strong>`;
+        }
+
+        function updateCountdown() {
+            const minutes = Math.floor(countdownTime / 60);
+            const seconds = countdownTime % 60;
+            document.getElementById('countdown').textContent = `${pad(minutes)}:${pad(seconds)}`;
+            countdownTime--;
+
+            // Si le compte à rebours atteint zéro, arrêter le timer
+            if (countdownTime < 0) {
+                clearInterval(countdownInterval);
+                clearInterval(priceIncreaseInterval); // Arrêter l'augmentation du prix
+                document.querySelector('.alert-message').innerHTML = "<strong>Je t'ai eu ! Tu t'es fait avoir, c'était un troll !</strong>";
+                document.getElementById('closeButton').innerText = "Tu as été trollé !";
+                document.getElementById('closeButton').disabled = false; // Permettre de fermer l'alerte à la fin
+            }
+        }
+
+        function pad(num) {
+            return num < 10 ? '0' + num : num;
+        }
+
+        function increasePrice() {
+            price += 10; // Augmenter le prix de 10€
+            document.getElementById('price').textContent = `${price}€`;
+        }
+
+        // La fermeture de l'alerte ne fonctionne pas (enlevé le click handler)
+        document.getElementById('closeButton').addEventListener('click', function() {
+            // Rien ne se passe quand on clique sur le bouton Fermer
+        });
+    </script>
+
+</body>
+</html>
